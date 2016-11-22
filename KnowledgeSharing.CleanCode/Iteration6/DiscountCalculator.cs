@@ -26,7 +26,8 @@ namespace KnowledgeSharing.CleanCode.Iteration6
                 case AccountStatus.MostValuableCustomer:
                     var discountPercentageByYears = GetDiscountPercentageByYearsRegistered(years);
                     var discountedAmount = GetDiscountedAmount(accountStatus, amount);
-                    return discountedAmount - (discountPercentageByYears * discountedAmount);
+                    result = discountedAmount - (discountPercentageByYears * discountedAmount);
+                    break;
                 default:
                     throw new NotImplementedException();
             }
